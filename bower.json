@@ -1,0 +1,11 @@
+{
+  "name": "amplience-app-bridge-angular",
+  "version": "0.1.0",
+  "description": "",
+  "main": "dist/amplience-app-bridge-angular.js",
+  "author": "Amplience",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "amplience-app-bridge": "0.1.0"
+  }
+}
