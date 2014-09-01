@@ -1,7 +1,7 @@
 /**
- * dam-app-host-angular
- * @version v0.0.1 - 2014-09-01
- * @link https://github.com/amplience/dam-app-host-angular
+ * amplience-app-bridge-angular
+ * @version v0.1.0 - 2014-09-01
+ * @link https://github.com/amplience/amplience-app-bridge-angular
  * @author Amplience <github@amplience.com>
  * @license Apache 2.0 - http://www.apache.org/licenses/LICENSE-2.0.html
  */
