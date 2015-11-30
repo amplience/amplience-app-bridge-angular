@@ -8,6 +8,15 @@ angular.module('amplience.AppHost', [])
         exit: function(){
             appHost.exit();
         },
+        renewToken: function(){
+            var readyPromise = $q.defer();
+            appHost.renewToken(function(response){
+                return readyPromise.resolve(response)
+            },function(error){
+                return readyPromise.reject(error);
+            });
+            return readyPromise.promise;
+        },
         connect: function(){
             var readyPromise = $q.defer();
             appHost.onReady(function(response){
