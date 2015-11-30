@@ -1,6 +1,6 @@
 /**
  * amplience-app-bridge-angular
- * @version v0.1.0 - 2014-09-01
+ * @version v0.1.1 - 2015-11-30
  * @link https://github.com/amplience/amplience-app-bridge-angular
  * @author Amplience <github@amplience.com>
  * @license Apache 2.0 - http://www.apache.org/licenses/LICENSE-2.0.html
@@ -750,6 +750,10 @@
         }
     };
 
+    Host.prototype.renewToken = function (success, error){
+        this.channel.call({method: 'renewToken', success: success, error: error});
+    };
+
     Host.prototype.onActivate = function(cb){
         return this.onActivateManager.register(cb);
     };
@@ -786,6 +790,15 @@ angular.module('amplience.AppHost', [])
     return {
         exit: function(){
             appHost.exit();
+        },
+        renewToken: function(){
+            var readyPromise = $q.defer();
+            appHost.renewToken(function(response){
+                return readyPromise.resolve(response)
+            },function(error){
+                return readyPromise.reject(error);
+            });
+            return readyPromise.promise;
         },
         connect: function(){
             var readyPromise = $q.defer();

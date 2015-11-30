@@ -6,6 +6,6 @@
   "author": "Amplience",
   "license": "Apache-2.0",
   "devDependencies": {
-    "amplience-app-bridge": "0.1.0"
+    "amplience-app-bridge": "amplience/amplience-app-bridge#feature/CMS-140-auto-project-set-up"
   }
 }
